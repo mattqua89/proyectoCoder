@@ -1,0 +1,266 @@
+/*Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header header"
+        "nav main main main"
+        "nav main main main"
+        "nav main main main"
+        "footer footer footer footer";
+}
+
+/*main*/
+.main {
+    grid-area: main;
+    height: 85vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(49, 49, 49);
+    overflow: auto;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.home div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.home iframe {
+    min-width: 480px;
+    max-height: 320px;
+    padding: 1rem;
+}
+
+.home p {
+    max-width: 560px;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    min-width: 200px;
+}
+
+/*header*/
+.header {
+    grid-area: header;
+    background-color: black;
+    background-image: url(../img/home.png);
+    color: whitesmoke;
+    height: 10vh;
+}
+
+.header img {
+    height: 5vh;
+    margin-left: 10vw;
+    margin-top: 2.5vh;
+}
+
+/*footer*/
+.footer {
+    grid-area: footer;
+    background-color: rgb(26, 26, 26);
+    height: 5vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bottonMenu {
+    text-align: center;
+}
+
+.bottonMenu li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.bottonMenu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.bottonMenu a:hover {
+    color: #c4302b;
+}
+
+/*nav*/
+.nav {
+    grid-area: nav;
+    background-color: rgb(0, 0, 0);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu li {
+    list-style: none;
+    padding: 15px;
+}
+
+.menu a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.menu li :hover {
+    text-decoration: underline;
+    color: #c4302b;
+    font-weight: bold;
+}
+
+/*releases*/
+
+.release {
+    overflow: auto;
+    height: 85vh;
+    text-align: center;
+}
+
+.release h2 {
+    padding: 2rem;
+    font-size: 3rem;
+    color: #c4302b;
+}
+
+.release ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.release li {
+    list-style: none;
+    padding: 2rem;
+}
+
+/*contacto*/
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 3rem;
+}
+
+.formulario h1 {
+    color: white;
+}
+
+.contacto {
+    display: inline-block;
+    margin: auto;
+    margin-top: 5vh;
+    padding: 25px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.contacto input {
+    display: inline-block;
+}
+
+.input1 {
+    width: 180px;
+}
+
+.input2 {
+    width: 368px;
+    height: 150px;
+}
+
+.button {
+    width: 80px;
+    height: 25px;
+    background-color: #c4302b;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+/*liveSets*/
+.liveSets {
+    text-align: center;
+    margin-top: 40vh;
+}
+
+.liveSets h1 {
+    color: white;
+}
+
+/*media*/
+
+.media {
+    text-align: center;
+    margin-top: 40vh;
+}
+
+.media h1 {
+    color: white;
+}
+
+
+/*responsive desing - Media Query - Mobile Last*/
+/*Mobile Last - Max Width*/
+
+@media (max-width:768px) {
+
+    .grilla {
+        grid-template-areas:
+            "header header header header"
+            "nav nav nav nav"
+            "main main main main"
+            "main main main main"
+            "footer footer footer footer";
+    }
+
+    .nav {
+        height: 5vh;
+    }
+
+    .menu {
+        flex-direction: row;
+    }
+
+    .main {
+        height: 80vh;
+    }
+
+    .home div {
+        flex-direction: column-reverse;
+    }
+
+    .header img {
+        height: 5vh;
+        margin-left: 42vw;
+        margin-top: 2.5vh;
+    }
+
+    .release ul {
+        flex-direction: column;
+    }
+
+}
